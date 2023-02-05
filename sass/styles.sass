@@ -1,0 +1,147 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    font-family: 'Josefin Sans'
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background-color: variables.$bg-color
+    color: variables.$text-color
+
+    a
+        color: variables.$text-color
+        text-decoration: none
+        transition: .4s
+
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+
+    @include mixins.mobile
+        padding: 1.1rem
+    
+    &-brand // .header-brand
+        color: variables.$primary-color
+        font-size: 2rem
+
+        &-destaque
+            color: variables.$secondary-color
+
+    &-navbar
+        ul
+            height: 100%
+            @include mixins.flex-center
+
+            @include mixins.mobile
+                display: none
+
+        li
+            margin: 0 1rem
+            font-size: .8rem
+            text-transform: uppercase
+            list-style: none
+
+            .active
+                color: variables.$secondary-color
+
+                a
+                    &:hover
+                        color: variables.$secondary-color
+
+    &-social-media
+
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            @include mixins.mobile
+                display: none
+
+            li
+                margin: 0 1rem
+                list-style: none
+                width: 2.5rem
+                height: 2.5rem
+                border-radius: 50%
+                @include mixins.flex-center
+                background-color: variables.$secondary-bg-color
+
+                a
+                    color: variables.$primary-color
+                    font-size: 20px
+
+                    &:hover
+                        color: variables.$secondary-color
+                        
+
+.gallery 
+    @include mixins.flex-center
+    @include mixins.container
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0
+
+    @include mixins.mobile
+        flex-direction: column
+
+    &-card
+        width: 31%
+        height: 400px
+        margin-bottom: 4%
+        @include mixins.flex-center
+        flex-direction: column
+        color: variables.$primary-color
+
+        @include mixins.mobile
+            width: 90%
+            margin-bottom: 6%
+
+        &:hover
+            border: 3px solid variables.$secondary-bg-color
+
+        &-title
+            font-size: 2rem
+            font-weight: 700
+            margin-bottom: 1rem 
+
+        &-btn
+            padding: .6rem 2rem
+            border: 2px solid variables.$primary-color
+            color: variables.$primary-color
+            font-weight: 400
+            text-transform: uppercase
+            letter-spacing: 1px // espaçamento ente as letras
+
+            &:hover
+                background-color: variables.$secondary-bg-color
+                
+
+    #card-1
+        @include mixins.bg-img('1.png')
+
+    #card-2
+        @include mixins.bg-img('2.png')
+
+    #card-3
+        @include mixins.bg-img('3.png')
+
+    #card-4
+        @include mixins.bg-img('4.png')
+
+    #card-5
+        @include mixins.bg-img('5.png')
+    
+    #card-6
+        @include mixins.bg-img('6.png')
+
+footer
+    text-align: center
+    padding-bottom: 2rem
+
+    span
+        font-weight: bold
+        color: variables.$secondary-color

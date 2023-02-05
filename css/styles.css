@@ -25,9 +25,12 @@ body a {
 @media (max-width: 425px) {
   .header {
     padding: 1.1rem;
+    gap: 2rem;
+    flex-direction: column;
   }
 }
 .header-brand {
+  text-align: center;
   color: #fff;
   font-size: 2rem;
 }
@@ -39,11 +42,6 @@ body a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 425px) {
-  .header-navbar ul {
-    display: none;
-  }
 }
 .header-navbar li {
   margin: 0 1rem;
@@ -62,11 +60,6 @@ body a {
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-@media (max-width: 425px) {
-  .header-social-media ul {
-    display: none;
-  }
 }
 .header-social-media ul li {
   margin: 0 1rem;

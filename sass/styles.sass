@@ -23,8 +23,11 @@ body
 
     @include mixins.mobile
         padding: 1.1rem
+        gap: 2rem
+        flex-direction: column
     
     &-brand // .header-brand
+        text-align: center
         color: variables.$primary-color
         font-size: 2rem
 
@@ -36,8 +39,7 @@ body
             height: 100%
             @include mixins.flex-center
 
-            @include mixins.mobile
-                display: none
+            
 
         li
             margin: 0 1rem
@@ -58,8 +60,7 @@ body
             @include mixins.flex-center
             height: 100%
 
-            @include mixins.mobile
-                display: none
+
 
             li
                 margin: 0 1rem
